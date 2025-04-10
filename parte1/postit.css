@@ -15,6 +15,7 @@ body{
    background-color:#666666b5;
     padding: 40px;
     border: solid black;
+    
 }
 
 
@@ -31,12 +32,15 @@ body{
     height: 130px;
     background: linear-gradient(to top, #F9FAC8, #ffff99);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+    animation: falldown 1s backwards;
+
 }
 .postit:hover{
     width: 190px;
     transform:rotate(-6deg) scale(1.5);
     z-index: 10;
     background: linear-gradient(to top, red, red);
+    
 }
 
 .postit:nth-child(2n):hover {
@@ -61,4 +65,15 @@ body{
 .postit p{
     margin: 10px 0 0 ;
     font-size: 15px;
+}
+
+@keyframes falldown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
