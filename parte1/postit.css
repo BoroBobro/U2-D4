@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(200, 255, 0);
+    
+}
+
+.container {
+    display: grid;
+   grid-template-columns: repeat(4,200px);
+   grid-gap:20px;
+   background-color:#666666b5;
+    padding: 40px;
+    border: solid black;
+}
+
+
+
+.postit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: black;
+    margin: 20px;
+    width: 180px;
+    height: 130px;
+    background: linear-gradient(to top, #F9FAC8, #ffff99);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+}
+.postit:hover{
+    width: 190px;
+    transform:rotate(-6deg) scale(1.5);
+    z-index: 10;
+    background: linear-gradient(to top, red, red);
+}
+
+.postit:nth-child(2n):hover {
+    background: linear-gradient(to top, #C8F8CA, #99ff99);
+    transform: rotate(5deg) scale(1.5);
+    width: 190px;
+    z-index: 10;
+}
+
+.postit:nth-child(3n):hover{
+    background: linear-gradient(to top, #C2C3EC, #C2C3EC);
+    transform: rotate(-6deg) scale(1.5);
+    width: 190px;
+    z-index: 10;
+}
+
+.postit h3 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.postit p{
+    margin: 10px 0 0 ;
+    font-size: 15px;
+}
